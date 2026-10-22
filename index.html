@@ -25,7 +25,7 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--soft);color:var(--ink);font-size:17px;line-height:1.6}
-.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
 img{max-width:100%;display:block}
 a{color:var(--teal)}
 /* top bar */
@@ -50,7 +50,8 @@ header .wrap{display:block;overflow:hidden;padding-top:10px;padding-bottom:10px}
 .hero .badge{display:inline-block;background:#fff;color:var(--teal);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:800;letter-spacing:.4px;box-shadow:var(--shadow-sm)}
 .hero h1{font-size:34px;line-height:1.16;color:var(--deep);margin:14px 0 10px;font-weight:800;letter-spacing:-.3px}
 .hero h1 .hl{color:var(--sky)}
-.hero p{font-size:17.5px;color:#47626e;max-width:34ch}
+.hero p{font-size:17.5px;color:#47626e;max-width:38ch}
+.hero-grid{display:grid;gap:26px;align-items:center}
 .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 20px}
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:800;font-size:15.5px;text-decoration:none;border:2px solid transparent;transition:.15s}
 .btn-pri{background:linear-gradient(135deg,var(--teal),var(--deep));color:#fff;box-shadow:var(--shadow)}
@@ -96,7 +97,7 @@ h2{font-size:25px;color:var(--deep);line-height:1.25;margin:4px 0 8px;font-weigh
 .help b{font-size:20px;color:#fff;display:block;margin-bottom:4px}
 .help a{color:#fff;font-weight:800}
 /* qr */
-.qrgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qrgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;margin-left:auto;margin-right:auto}
 .qrbox{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center;box-shadow:var(--shadow-sm)}
 .qrbox img{width:118px;height:118px;margin:0 auto 8px;border-radius:10px}
 .qrbox b{color:var(--deep);font-size:15px;display:block}
@@ -113,7 +114,8 @@ footer a{color:var(--teal);font-weight:700;text-decoration:none}
 .callfloat a{flex:1;text-align:center;border-radius:999px;padding:14px 10px;font-weight:800;font-size:15px;text-decoration:none;box-shadow:var(--shadow)}
 .callfloat .a1{background:linear-gradient(135deg,var(--teal),var(--deep));color:#fff}
 .callfloat .a2{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
-@media(min-width:560px){ .cards{grid-template-columns:1fr 1fr} .opt{grid-template-columns:1fr 1fr 1fr} .hero h1{font-size:40px} }
+@media(min-width:700px){ .cards{grid-template-columns:1fr 1fr} .loc{grid-template-columns:1fr 1fr} .opt{grid-template-columns:1fr 1fr 1fr} }
+@media(min-width:1024px){ .hero-grid{grid-template-columns:1.05fr .95fr} .hero{padding-top:38px} .hero h1{font-size:44px} .cards{grid-template-columns:repeat(3,1fr)} .testi{grid-template-columns:repeat(3,1fr)} h2{font-size:28px} section{padding:42px 0 8px} }
 @media print{ .callfloat{display:none} header{position:static} }
 </style>
 </head>
@@ -137,6 +139,8 @@ footer a{color:var(--teal);font-weight:700;text-decoration:none}
 </div></header>
 
 <div class="hero"><div class="wrap">
+  <div class="hero-grid">
+    <div>
   <span class="badge" data-en="ALL SERVICES FREE &amp; CONFIDENTIAL" data-es="TODO GRATIS Y CONFIDENCIAL">ALL SERVICES FREE &amp; CONFIDENTIAL</span>
   <h1 data-en="“This wasn't my plan.” We hear you — and we're here." data-es="«Esto no estaba en mis planes». Te escuchamos — y estamos aquí.">“This wasn't my plan.” <span class="hl">We hear you</span> — and we're here.</h1>
   <p data-en="Free pregnancy tests, free limited ultrasounds and honest answers about your options — with compassionate, confidential care at 5 Tampa Bay locations." data-es="Pruebas de embarazo gratis, ultrasonidos limitados gratis y respuestas honestas sobre tus opciones — con atención compasiva y confidencial en 5 sedes de Tampa Bay.">Free pregnancy tests, free limited ultrasounds and honest answers about your options — with compassionate, confidential care at 5 Tampa Bay locations.</p>
@@ -144,7 +148,9 @@ footer a{color:var(--teal);font-weight:700;text-decoration:none}
     <a class="btn btn-pri" href="https://oasispregnancycenter.org/request-an-appointment/" data-en="Request an Appointment" data-es="Pedir una cita">Request an Appointment</a>
     <a class="btn btn-sec" href="tel:+18139789737" data-en="Call (813) 978-9737" data-es="Llamar (813) 978-9737">Call (813) 978-9737</a>
   </div>
-  <div class="hero-img"><img src="imgs/grupo.webp" width="1024" height="369" alt="Oasis Pregnancy Care Centers team and center"></div>
+    </div>
+    <div class="hero-img"><img src="imgs/grupo.webp" width="1024" height="369" alt="Oasis Pregnancy Care Centers team and center"></div>
+  </div>
   <div class="trust">
     <div><span>✓</span><i data-en="Free tests" data-es="Pruebas gratis">Free tests</i></div>
     <div><span>✓</span><i data-en="Free ultrasounds" data-es="Ultrasonidos gratis">Free ultrasounds</i></div>
